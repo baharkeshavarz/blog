@@ -1,5 +1,6 @@
-import { Box } from '@mui/material';
+import { Box, Skeleton, Stack } from '@mui/material';
 import Post from './Post';
+import { useState } from 'react';
 
 const posts = [
   {
@@ -20,9 +21,28 @@ const posts = [
 ]
 
 export default function Feed() {
+  const [loading, setLoading] = useState(true)
+  setTimeout(() => {
+    setLoading(false)
+  }, 3000)
   return (
      <Box flex={4} sx={{ padding: "20px" }}>
-         {posts.map(post => <Post post={post} key={post.title}/>)}
+      {loading 
+          ? (
+               posts.map(post => (
+                <Stack>
+                    <Skeleton variant="text" height={100}/>
+                    <Skeleton variant="text" height={20}/>
+                    <Skeleton variant="text" height={20}/>
+                    <Skeleton variant="rectangular" height={300}/>
+                </Stack>
+                ))
+            )
+          : (
+            posts.map(post => 
+                          <Post post={post} key={post.title}/>
+                      )
+          )}
      </Box>
   );
 }
