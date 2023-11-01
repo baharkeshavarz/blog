@@ -1,4 +1,4 @@
-# Fullstack Discord Clone: Next.js 13, React, Socket.io, Prisma, Tailwind, MySQL
+# Blog, React, Material UI
 
 !["Blot"](/public/images/preview.jpg)
 
