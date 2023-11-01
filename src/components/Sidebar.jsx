@@ -14,17 +14,18 @@ const Sidebar = () => {
       flex={1}
       sx={{ display: { xs: "none", sm: "block"}}}
       >
+      <Box position="fixed">
         <List>
-           <ListItem>
+           <ListItem disablePadding>
               <ListItemButton component="a" href="#page">
                   <ListItemIcon>
                       <HomeIcon />
                   </ListItemIcon>
-                  <ListItemText primary="Home Page" />
+                  <ListItemText primary="Home Page"/>
               </ListItemButton>
            </ListItem>
 
-           <ListItem>
+           <ListItem disablePadding>
                <ListItemButton component="a" href="#pages">
                   <ListItemIcon>
                      <ArticleIcon />
@@ -33,7 +34,7 @@ const Sidebar = () => {
                </ListItemButton>
            </ListItem>
 
-           <ListItem>
+           <ListItem disablePadding>
                <ListItemButton component="a" href="#groups">
                   <ListItemIcon>
                      <Diversity2Icon />
@@ -42,7 +43,7 @@ const Sidebar = () => {
                </ListItemButton>
            </ListItem>
 
-           <ListItem>
+           <ListItem disablePadding>
                <ListItemButton component="a" href="#marketplace">
                   <ListItemIcon>
                      <StorefrontIcon />
@@ -51,7 +52,7 @@ const Sidebar = () => {
                </ListItemButton>
            </ListItem>
 
-           <ListItem>
+           <ListItem disablePadding>
                <ListItemButton component="a" href="#friends">
                   <ListItemIcon>
                      <FriendsIcon />
@@ -60,7 +61,7 @@ const Sidebar = () => {
                </ListItemButton>
            </ListItem>
 
-           <ListItem>
+           <ListItem disablePadding>
                <ListItemButton component="a" href="#setting">
                   <ListItemIcon>
                      <SettingsIcon />
@@ -69,7 +70,7 @@ const Sidebar = () => {
                </ListItemButton>
            </ListItem>
 
-           <ListItem>
+           <ListItem disablePadding>
                <ListItemButton component="a" href="#profile">
                   <ListItemIcon>
                      <ProfileIcon />
@@ -78,7 +79,7 @@ const Sidebar = () => {
                </ListItemButton>
            </ListItem>
 
-           <ListItem>
+           <ListItem disablePadding>
                <ListItemButton component="a" href="#moon-night">
                   <ListItemIcon>
                      <ModeNightIcon />
@@ -88,6 +89,7 @@ const Sidebar = () => {
            </ListItem>
         </List>
       </Box>
+    </Box>
   )
 }
 
